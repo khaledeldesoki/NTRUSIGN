@@ -5,6 +5,6 @@
   -v 'file'                   Verify the signature of the specified file using the public key.
 
 
- python  /main.py -g my_keys
- python  /main.py -is my_secret_priv.asc -s message.txt
- python  /main.py -ip friend_key_pub.asc -v signed_message.txt
+ python  main.py -g my_keys
+ python  main.py -is my_keys_priv.asc -s message
+ python  main.py -ip my_keys_pub.asc -v message
