@@ -39,9 +39,17 @@ class KeyPair:
                  gen=False,
                  name="User Name",
                  email="user@example.com"):
-        """
-        Create a key with the parameter passed to the constructor
-        """
+
+#use this numbers  for testing 
+                #  N=7,
+                #  q=13,
+                #  df=2,
+                #  dg=2,
+                #  B=1,
+
+
+    
+        # Create a key with the parameter passed to the constructor
         if gen:
             f = [None for _ in range(B+1)]
             fp = [None for _ in range(B+1)]
@@ -290,12 +298,14 @@ class KeyPair:
 
         self.q = int(sn)
 
-
 if __name__ == "__main__":
     import time
     t = time.time()
     N = 32
     k = KeyPair(251, 128, 73, 71, 1, gen=True, name="eldesoki", email="eldesoki@email.com")
+    # use this numbers for testing
+    # N = 7 k = KeyPair(7, 13, 2, 2, 1,
+
     print(f"Time to calculate key : {int((time.time()-t)*100)/100}s")
     s = k.export_pub(True)
     s2 = k.export_priv(True)

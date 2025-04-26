@@ -5,12 +5,11 @@ import NTRU
 import KeyGenerator
 from time import time
 
-
-
 if len(sys.argv) == 1:
     print("No arguments were provided !\n")
     exit(1)
-
+#use this numbers for testing
+# (N, q, df, dg, B, t, N_bound) = (7, 13, 2, 2, 1, 'transpose', 17)
 (N, q, df, dg, B, t, N_bound) = (251, 128, 73, 71, 1, 'transpose', 545)
 k = KeyGenerator.KeyPair()
 i = 1
