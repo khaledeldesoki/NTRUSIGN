@@ -1,0 +1,10 @@
+  -g 'filename'            Generate a key pair with the given name in the specified path.
+  -ip 'path to public key'   Import a public key from the specified file.
+  -is 'path to private key'  Import a private key from the specified file.
+  -s 'file'                   Sign the specified file using the private key.
+  -v 'file'                   Verify the signature of the specified file using the public key.
+
+
+ python  /main.py -g my_keys
+ python  /main.py -is my_secret_priv.asc -s message.txt
+ python  /main.py -ip friend_key_pub.asc -v signed_message.txt
